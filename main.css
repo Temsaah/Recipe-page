@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  --clr-primary-nutmeg: hsl(14, 45%, 36%);
+  --clr-primary-dark-raspberry: hsl(332, 51%, 32%);
+
+  --clr-neutral-rose-white: hsl(330, 100%, 98%);
+  --clr-neutral-eggshell: hsl(30, 54%, 90%);
+  --clr-neutral-light-grey: hsl(30, 18%, 87%);
+  --clr-neutral-wenge-brown: hsl(30, 10%, 34%);
+  --clr-neutral-dark-charcoal: hsl(24, 5%, 18%);
+
+  --ff-young: "Young Serif", serif;
+  --ff-outfit: "Outfit", sans-serif;
+
+  --fw-regular: 400;
+  --fw-sb: 600;
+  --fw-bold: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* UTILITY CLASSES  */
+
+.text-nutmeg {
+  color: var(--clr-primary-nutmeg);
+}
+
+.text-dark-raspberry {
+  color: var(--clr-primary-dark-raspberry);
+}
+
+.text-rose-white {
+  color: var(--clr-neutral-rose-white);
+}
+
+.text-eggshell {
+  color: var(--clr-neutral-eggshell);
+}
+
+.text-light-grey {
+  color: var(--clr-neutral-light-grey);
+}
+
+.text-wenge-brown {
+  color: var(--clr-neutral-wenge-brown);
+}
+
+.text-dark-charcoal {
+  color: var(--clr-neutral-dark-charcoal);
+}
+
+.ff-young {
+  font-family: var(--ff-young);
+}
+.ff-outfit {
+  font-family: var(--ff-outfit);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-sb {
+  font-weight: var(--fw-sb);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+/* ================= */
+
+body {
+  background-color: var(--clr-neutral-light-grey);
+  font-family: var(--ff-outfit);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: min(100%, 700px);
+}
+
+.recipe > * + * {
+  padding: 2rem;
+}
+
+.recipe {
+  background-color: white;
+}
+
+.recipe__description h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.recipe__preparation {
+  padding-inline: 3rem;
+}
+
+.recipe__preparation nav ul {
+  padding-inline: 1rem;
+}
+
+.recipe__preparation > p {
+  font-size: 1.3rem;
+}
+
+.recipe__preparation li,
+.recipe__instructions li {
+  color: var(--clr-neutral-wenge-brown);
+}
+
+.recipe__preparation li > p span,
+.recipe__instructions li > p span {
+  color: var(--clr-neutral-wenge-brown);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+
+  font-family: var(--ff-outfit);
+}
+
+.recipe__preparation li > p,
+.recipe__instructions li > p {
+  margin-left: 1rem;
+}
+
+.recipe__preparation ul {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.recipe__ingredients > p,
+.recipe__instructions > p,
+.recipe__nutrition > p:first-child {
+  font-size: 1.7rem;
+  color: var(--clr-primary-nutmeg);
+}
+
+.recipe__ingredients nav ul {
+  padding-inline: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.recipe__ingredients nav li {
+  color: var(--clr-neutral-wenge-brown);
+  font-weight: var(--fw-regular);
+}
+
+.recipe__ingredients nav li p {
+  margin-left: 1rem;
+}
+
+.recipe__instructions nav ul {
+  list-style: decimal;
+  padding-inline: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe__nutrition > p:first-child {
+  margin-bottom: 1rem;
+}
+
+.recipe__nutrition > p:nth-child(2) {
+  color: var(--clr-neutral-wenge-brown);
+}
+
+.recipe__nutrition__facts {
+  padding: 1.5rem;
+}
+
+.recipe__nutrition__facts > * {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.recipe__nutrition__facts > div > p:first-child {
+  color: var(--clr-neutral-wenge-brown);
+}
+
+.recipe__nutrition__facts > div > p:last-child {
+  color: var(--clr-neutral-wenge-brown);
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 700px) {
+  main {
+    padding-block: 5rem;
+  }
+
+  .recipe {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .recipe__image img {
+    border-radius: 1rem;
+  }
+}
